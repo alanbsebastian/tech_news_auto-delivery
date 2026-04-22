@@ -94,6 +94,10 @@ def send_briefing_email(briefing_text):
     sender = os.environ.get('GMAIL_ADDRESS')
     password = os.environ.get('GMAIL_APP_PASSWORD')
     receiver = os.environ.get('GMAIL_ADDRESS')
+    receiver2 = os.environ.get('GMAIL_RECEIVER2')
+    receiver3 = os.environ.get('GMAIL_RECEIVER3')
+
+    all_receivers = [r for r in [receiver, receiver2, receiver3] if r]
 
     # --- Parse articles into sections ---
     sections = ""
@@ -158,12 +162,12 @@ def send_briefing_email(briefing_text):
     msg = MIMEMultipart("alternative")
     msg["Subject"] = "💡 Your Daily AI & Robotics Briefing 🤖"
     msg["From"] = sender
-    msg["To"] = receiver
+    msg["To"] = ", ".join(all_receivers)
     msg.attach(MIMEText(html, "html"))
 
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
         server.login(sender, password)
-        server.sendmail(sender, [receiver], msg.as_string())
+        server.sendmail(sender, all_receivers, msg.as_string())
         print("✅ Briefing email sent successfully!")
 
 send_briefing_email(briefing_text)
