@@ -151,7 +151,7 @@ def send_briefing_email(briefing_text):
         {sections}
 
         <div style="text-align: center; margin-top: 20px; padding: 15px;">
-            <p style="color: #aaaaaa; font-size: 12px; letter-spacing: 1px;">Generated automatically by your personal AI news tool</p>
+            <p style="color: #aaaaaa; font-size: 12px; letter-spacing: 1px;">Generated Automatically by a Custom Built Tech News Tool</p>
         </div>
 
     </body>
