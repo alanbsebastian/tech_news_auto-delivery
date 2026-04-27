@@ -1,8 +1,8 @@
-name: Daily AI Briefing
+name: Daily Tech News Briefing
 
 on:
   schedule:
-    - cron: '30 1 * * *'
+    - cron: '30 23 * * *'
   workflow_dispatch:
 
 jobs:
