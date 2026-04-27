@@ -57,7 +57,7 @@ for i, article in enumerate(filtered_articles[:15]):
 
 prompt = f"""
 You are a tech news analyst writing a daily briefing email for a professional audience.
-Below are today's relevant AI and robotics news headlines and summaries.
+Below are today's relevant tech news headlines and summaries.
 
 {articles_text}
 
@@ -144,7 +144,7 @@ def send_briefing_email(briefing_text):
     <body style="font-family: 'Inter', Arial, sans-serif; max-width: 700px; margin: auto; padding: 20px; background-color: #ffffff;">
 
         <div style="padding: 30px; text-align: center;">
-            <h1 style="font-family: 'Playfair Display', Georgia, serif; color: #000000; font-size: 56px; margin: 0; letter-spacing: 2px; font-weight: 700;">AI & Robotics</h1>
+            <h1 style="font-family: 'Playfair Display', Georgia, serif; color: #000000; font-size: 56px; margin: 0; letter-spacing: 2px; font-weight: 700;">Tech News</h1>
             <p style="font-family: 'Raleway', sans-serif; color: #555555; margin: 8px 0 0 0; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; font-weight: 300;">Daily Briefing</p>
         </div>
 
@@ -160,7 +160,7 @@ def send_briefing_email(briefing_text):
 
     # --- Set up and send email ---
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = "💡 Your Daily AI & Robotics Briefing 🤖"
+    msg["Subject"] = "🤖 Hey! Here's Your Daily Tech News Briefing💡"
     msg["From"] = sender
     msg["To"] = ", ".join(all_receivers)
     msg.attach(MIMEText(html, "html"))
