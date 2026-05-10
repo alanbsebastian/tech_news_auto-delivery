@@ -96,8 +96,9 @@ def send_briefing_email(briefing_text):
     receiver = os.environ.get('GMAIL_ADDRESS')
     receiver2 = os.environ.get('GMAIL_RECEIVER2')
     receiver3 = os.environ.get('GMAIL_RECEIVER3')
+    receiver4 = os.environ.get('GMAIL_RECEIVER4')
 
-    all_receivers = [r for r in [receiver, receiver2, receiver3] if r]
+    all_receivers = [r for r in [receiver, receiver2, receiver3, receiver4] if r]
 
     # --- Parse articles into sections ---
     sections = ""
