@@ -28,4 +28,5 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           GMAIL_RECEIVER2: ${{ secrets.GMAIL_RECEIVER2 }}
           GMAIL_RECEIVER3: ${{ secrets.GMAIL_RECEIVER3 }}
+          GMAIL_RECEIVER4: ${{ secrets.GMAIL_RECEIVER4 }}
         run: python briefing.py
